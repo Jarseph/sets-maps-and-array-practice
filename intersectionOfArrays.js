@@ -11,15 +11,17 @@ function intersection(a, b) {
 }
 
 function intersectionUsingMap(a, b) {
-  const newMap = new Map();
-  const newSet = new Set();
-  a.forEach((e) => newMap.set(e));
-  b.forEach((e) => newMap.has(e));
-  if (newMap.has(e)) {
-    newSet.add(e);
+  const map = new Map();
+  const results = new Set();
+  for (let e of a) {
+    map.set(e, e);
   }
-  const arr = [...newSet]
-  return arr;
+  for (let e of b) {
+    if (map.has(e)) {
+      results.add(e);
+    }
+  }
+  return Array.from(results);
 }
 
 module.exports  {

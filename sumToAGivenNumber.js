@@ -16,11 +16,11 @@ function sumToAGivenNumber(arr, givenNumber) {
 function sumToAGivenNumberUsingMap(arr, givenNumber) {
   const numbers = new Map();
   const solutions = new Map();
-  for (let e of A) {
+  for (let e of arr) {
     numbers.set(e, e);
   }
-  for (let e of A) {
-    let diff = N - e;
+  for (let e of arr) {
+    let diff = givenNumber - e;
     if (diff !== e) {
       if (numbers.has(diff)) {
         solution.set(Math.min(e, diff), Math.max(e, diff));

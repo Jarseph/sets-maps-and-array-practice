@@ -3,9 +3,9 @@ const b = ['A', 'A', 'E', 'C', 'D'];
 
 function intersection(a, b) {
   let result = [];
-  a.forEach('E' => b.includes('E'));
-  if (b.includes('E')) {
-    result.push('E');
+  a.forEach((e) => b.includes(e));
+  if (b.includes(e)) {
+    result.push(e);
   }
   return result;
 }
@@ -13,10 +13,10 @@ function intersection(a, b) {
 function intersectionUsingMap(a, b) {
   const newMap = new Map();
   const newSet = new Set();
-  a.forEach('E' => newMap.set('E'));
-  b.forEach('E' => newMap.has('E'));
-  if (newMap.has('E')) {
-    newSet.add('E');
+  a.forEach((e) => newMap.set(e));
+  b.forEach((e) => newMap.has(e));
+  if (newMap.has(e)) {
+    newSet.add(e);
   }
   const arr = [...newSet]
   return arr;

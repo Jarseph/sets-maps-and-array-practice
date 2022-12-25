@@ -16,17 +16,19 @@ function sumToAGivenNumber(arr, givenNumber) {
 function sumToAGivenNumberUsingMap(arr, givenNumber) {
   const numbers = new Map();
   const solutions = new Map();
-  arr.forEach((e) => numbers.add(e));
-  arr.forEach((e) => {
-    const diff = givenNumber - e;
+  for (let e of A) {
+    numbers.set(e, e);
+  }
+  for (let e of A) {
+    let diff = N - e;
     if (diff !== e) {
       if (numbers.has(diff)) {
-        solutions.add([e, diff]);
+        solution.set(Math.min(e, diff), Math.max(e, diff));
       }
     }
-  })
-  const solutionsArray = [...solutions]
-  return solutionsArray;
+  }
+
+  return Array.from(solution);
 }
 
 module.exports = {
